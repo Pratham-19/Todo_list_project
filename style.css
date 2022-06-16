@@ -136,12 +136,38 @@ h1 {
     background-color: #ffffff;
     border: solid black;
     position: relative;
-    width: max-content;
+    width: 220px;
     /* display: none; */
     z-index: 3;
     top: 50%;
     transform: translate(0, -50%);
     margin: auto;
     padding: 10px;
+
+}
+
+/* #innerLoginBox {
+    width: 220px;
+} */
+
+.center {
+    text-align: center;
+}
+
+form input,
+button {
+    /* padding: px; */
+    margin: 7px;
+}
+
+.faviIcon {
+    border-radius: 37px;
+    width: 27px;
+    margin: 0 5px;
+}
+
+.signInPics {
+    display: flex;
+    justify-content: center;
 
 }
