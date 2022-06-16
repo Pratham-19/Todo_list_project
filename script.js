@@ -11,7 +11,7 @@ function on() {
     document.getElementById("loginBox").style.display = "block";
 }
 
-function off() {
-    document.getElementById("overlay").style.display = "none";
-    document.getElementById("loginBox").style.display = "none";
-}
+// function off() {
+//     document.getElementById("overlay").style.display = "none";
+//     document.getElementById("loginBox").style.display = "none";
+// }

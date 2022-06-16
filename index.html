@@ -12,10 +12,28 @@
 
 <body>
     <div id="overlay" onclick="off()">
-        <span id="loginBox">
-            <input type="email" value="Enter email"> <br>
-            <input type="password" value="Enter password">
-        </span></div>
+        <div id="loginBox">
+            <form>
+                <div class="container">
+                    <h1>Sign Up</h1>
+                    <hr>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" placeholder="Enter Email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" required>
+                    <p>Already a member ?<a href="#" style="color:dodgerblue">Login</a>
+                    </p>
+
+                    <div class="clearfix">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <ul>
         <li class="rightAlign"><a>Sign Up</a> </li>
         <li class="rightAlign"><a>Login</a></li>

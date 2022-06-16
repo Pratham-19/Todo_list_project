@@ -134,14 +134,14 @@ h1 {
 
 #loginBox {
     background-color: #ffffff;
-    /* border: solid black; */
+    border: solid black;
     position: relative;
-    width: 200px;
-    display: none;
+    width: max-content;
+    /* display: none; */
     z-index: 3;
-    left: 50%;
-    transform: translateX(-50%);
     top: 50%;
     transform: translate(0, -50%);
+    margin: auto;
+    padding: 10px;
 
 }
