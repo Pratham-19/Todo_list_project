@@ -1,0 +1,120 @@
+* {
+    /* font-family: 'Aleo', serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0%;
+}
+
+ul {
+    /* position: sticky; */
+    /* position: -webkit-sticky; */
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* border: solid black; */
+    overflow: hidden;
+    /* border-bottom: solid 0.5vh black; */
+    /* box-shadow: 0.5px 0.5px 0.5px 0.5px; */
+    /* border: solid red; */
+    /* background-color: aqua; */
+    /* box-sizing: border-box; */
+}
+
+li {
+    float: left;
+}
+
+.rightAlign {
+    /* align-items: flex-end; */
+    float: right;
+}
+
+li a {
+    display: block;
+    margin: 2px;
+    /* background-color: rgb(52, 223, 98); */
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 19px;
+}
+
+li a:hover {
+    background-color: yellowgreen;
+    cursor: default;
+}
+
+.box {
+    margin-top: 5px;
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.firstBox {
+    margin-top: 5px;
+    border: solid black;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    /* overflow: hidden; */
+    /* gap: 0; */
+}
+
+.innerFirstBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* margin-top: 10px; */
+    /* margin-bottom: 30px; */
+}
+
+#image {
+    width: 20vw;
+    height: auto;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.midBox {
+    /* display: inline-block; */
+    border: solid black;
+    width: 85%;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    color: rgb(252, 252, 252);
+    padding: 2px 17px;
+    /* font-size: ; */
+}
+
+.signUp {
+    background-color: #040203;
+    border-radius: 13px;
+    display: inline-block;
+
+}
+
+#midEle {
+    color: #19cd67;
+}
+
+p {
+    text-align: center;
+    font-size: calc(1vw + 1vmin);
+}
+
+h1 {
+    font-size: calc(2vw + 1vh + 1vmin);
+}
