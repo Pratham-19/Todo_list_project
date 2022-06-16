@@ -11,6 +11,11 @@
 </head>
 
 <body>
+    <div id="overlay" onclick="off()">
+        <span id="loginBox">
+            <input type="email" value="Enter email"> <br>
+            <input type="password" value="Enter password">
+        </span></div>
     <ul>
         <li class="rightAlign"><a>Sign Up</a> </li>
         <li class="rightAlign"><a>Login</a></li>
@@ -29,9 +34,9 @@
                         obcaecati velit,<br>
                         id earum harum dolore?</p>
                 </span>
-                <div class="signUp">
-                    <h5>Get started for free →</h5>
-                </div>
+                <!-- <div class="signUp"> -->
+                <button id="button">Get started for free →</button>
+                <!-- </div> -->
             </div>
             <img id="image" src="Images\7.png" alt="Main Image here">
 
@@ -67,7 +72,9 @@
             </span>
         </div>
     </div>
+
 </body>
+<script src="script.js"></script>
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
