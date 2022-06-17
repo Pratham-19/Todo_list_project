@@ -50,17 +50,18 @@ li a:hover {
 
 .box {
     margin-top: 5px;
-    border: solid black;
+    /* border: solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     justify-content: center;
     gap: 0;
 }
 
 .firstBox {
     margin-top: 5px;
-    border: solid black;
+    /* border: solid black; */
     display: flex;
     /* flex-direction: column; */
     align-items: center;
@@ -169,5 +170,78 @@ button {
 .signInPics {
     display: flex;
     justify-content: center;
+
+}
+
+#brutask{
+    font-size: calc(2vw + 1vh + 1vmin);
+}
+
+.ele>h1{
+    line-height: 110%;
+    font-family: Manrope,sans-serif;
+    font-weight: 800;
+    margin-top: 74px;
+}
+.ele>h1>span{
+    font-family: Manrope,sans-serif;
+    font-weight: 800;
+
+}
+#remote{
+    font-weight: 800%;
+    font-family: Manrope,sans-serif;
+}
+.ele{
+    width: 70%;
+    
+}
+.boxCSS{
+    background-color: #529b72;
+    border-radius: 89px;
+    width: 40%;
+    margin-left: -630px;
+    height: 400px;
+    padding: 2%;
+    margin-bottom: 122px;
+    margin-left: -632px;
+    margin-top: 70px;
+}
+
+.boxCSS>p{
+    font-family: Manrope,sans-serif; 
+    font-weight: 800;
+    color:yellow;
+    font-size: calc(2vw + 1vh + 1vmin);
+    text-align:justify ;
+    
+    
+
+}
+#nwm{
+    margin-top: -46px;
+}
+.image img{
+    position: absolute;
+    right: 181px;
+    top: 17%;
+    width: 500px;
+}
+
+.elee>h1{
+    text-align: center;
+    font-family:Manrope,sans-serif ;
+    font-weight: 800;
+}
+
+#btn{
+    padding: 26px;
+    border-radius: 200px;
+    cursor: pointer;
+    background: #ccfeff;
+    color: green;
+    font-weight: 800;
+}
+.last img{
 
 }
