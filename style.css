@@ -8,20 +8,12 @@ body {
 }
 
 ul {
-    /* position: sticky; */
-    /* position: -webkit-sticky; */
     top: 0;
     width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /* border: solid black; */
     overflow: hidden;
-    /* border-bottom: solid 0.5vh black; */
-    /* box-shadow: 0.5px 0.5px 0.5px 0.5px; */
-    /* border: solid red; */
-    /* background-color: aqua; */
-    /* box-sizing: border-box; */
 }
 
 li {
@@ -29,7 +21,6 @@ li {
 }
 
 .rightAlign {
-    /* align-items: flex-end; */
     float: right;
 }
 
@@ -127,12 +118,26 @@ h1 {
     z-index: 2;
 }
 
+#signUpBox {
+    background-color: #ffffff;
+    border: solid black;
+    position: relative;
+    max-width: 300px;
+    display: none;
+    z-index: 3;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: auto;
+    padding: 10px;
+
+}
+
 #loginBox {
     background-color: #ffffff;
     border: solid black;
     position: relative;
     max-width: 300px;
-    /* display: none; */
+    display: none;
     z-index: 3;
     top: 50%;
     transform: translate(0, -50%);

@@ -5,26 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do</title>
+    <title>First-Page</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Aleo&family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="overlay">
-        <div id="loginBox">
+        <div id="signUpBox">
             <form id="form">
-                <div style="text-align: right;margin-right: 15px; cursor: pointer;" onclick="off()">✕</div>
+                <div style="text-align: right;margin-right: 15px; cursor: pointer;" onclick="signUpOff()">✕</div>
                 <h1 class="center">Sign Up</h1>
                 <hr>
-
                 <label for="email"><b>Email</b></label>
                 <input type="email" placeholder="Enter Email" required>
-
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" required>
-
-
                 <div>
                     <button type="submit">Sign Up</button>
                 </div>
@@ -35,18 +31,35 @@
                     <img src="Images/google.jpg" alt="google.com" class="faviIcon"><img src="Images/facebook.png"
                         alt="facebook.com" class="faviIcon"><img src="Images/twitter.png" alt="twitter.com"
                         class="faviIcon">
-
                 </div>
-                <!-- </div> -->
+            </form>
+        </div>
+        <div id="loginBox">
+            <form id="form">
+                <div style="text-align: right;margin-right: 15px; cursor: pointer;" onclick="loginOff()">✕</div>
+                <h1 class="center">Login</h1>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" required>
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+                <h5 class="center">or</h5>
+                <div class="signInPics">
+                    <img src="Images/google.jpg" alt="google.com" class="faviIcon"><img src="Images/facebook.png"
+                        alt="facebook.com" class="faviIcon"><img src="Images/twitter.png" alt="twitter.com"
+                        class="faviIcon">
+                </div>
             </form>
         </div>
     </div>
     <ul>
-        <li class="rightAlign"><a>Sign Up</a> </li>
-        <li class="rightAlign"><a>Login</a></li>
+        <li class="rightAlign" onclick="signUpOn()"><a>Sign Up</a> </li>
+        <li class="rightAlign" onclick="loginOn()"><a>Login</a></li>
     </ul>
     <div>
-
         <div class="firstBox">
             <img id="image" src="Images\6.png" alt="Main Image here">
             <div class="innerFirstBox">
@@ -59,12 +72,9 @@
                         obcaecati velit,<br>
                         id earum harum dolore?</p>
                 </span>
-                <!-- <div class="signUp"> -->
-                <button id="button">Get started for free →</button>
-                <!-- </div> -->
+                <button id="button" onclick="signUpOn()">Get started for free →</button>
             </div>
             <img id="image" src="Images\7.png" alt="Main Image here">
-
         </div>
         <div class="box">
             <div class="ele">
@@ -92,9 +102,7 @@
                     obcaecati velit,<br>
                     id earum harum dolore?</p>
             </span>
-            <span class="signUp">
-                <h5>Sign Up</h5>
-            </span>
+            <button id="button" onclick="signUpOn()">Sign Up now !</button>
         </div>
     </div>
 
@@ -134,9 +142,13 @@ formDetails.addEventListener("submit", async (a) => {
     .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        off();
-        alert(email + " " + password);
-    })
+        
+       
+        // window.open("toDoIndex.html","_blank")
+        // .href="toDoIndex.html";
+        // window.replace.href="to_do_index.html";
+        window.location.href="to_do_index.html" 
+       })
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
