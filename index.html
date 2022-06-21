@@ -13,7 +13,7 @@
 <body>
     <div id="overlay">
         <div id="signUpBox">
-            <form id="form">
+            <form id="signUpForm">
                 <div style="text-align: right;margin-right: 15px; cursor: pointer;" onclick="signUpOff()">✕</div>
                 <h1 class="center">Sign Up</h1>
                 <hr>
@@ -28,14 +28,15 @@
                 </p>
                 <h5 class="center">or</h5>
                 <div class="signInPics">
-                    <img src="Images/google.jpg" alt="google.com" class="faviIcon"><img src="Images/facebook.png"
-                        alt="facebook.com" class="faviIcon"><img src="Images/twitter.png" alt="twitter.com"
-                        class="faviIcon">
+                    <img src="Images/google.jpg" id="gImg" alt="google.com" class="faviIcon"
+                        style="cursor: pointer;"><img src="Images/facebook.png" alt="facebook.com" class="faviIcon"
+                        style="cursor: pointer;"><img src="Images/twitter.png" alt="twitter.com" class="faviIcon"
+                        style="cursor: pointer;">
                 </div>
             </form>
         </div>
         <div id="loginBox">
-            <form id="form">
+            <form id="loginForm">
                 <div style="text-align: right;margin-right: 15px; cursor: pointer;" onclick="loginOff()">✕</div>
                 <h1 class="center">Login</h1>
                 <hr>
@@ -48,9 +49,10 @@
                 </div>
                 <h5 class="center">or</h5>
                 <div class="signInPics">
-                    <img src="Images/google.jpg" alt="google.com" class="faviIcon"><img src="Images/facebook.png"
-                        alt="facebook.com" class="faviIcon"><img src="Images/twitter.png" alt="twitter.com"
-                        class="faviIcon">
+                    <img src="Images/google.jpg" id="gImg" alt="google.com" class="faviIcon"
+                        style="cursor: pointer;"><img src="Images/facebook.png" alt="facebook.com" class="faviIcon"
+                        style="cursor: pointer;"><img src="Images/twitter.png" alt="twitter.com" class="faviIcon"
+                        style="cursor: pointer;">
                 </div>
             </form>
         </div>
@@ -109,16 +111,12 @@
 </body>
 <script src="script.js"></script>
 <script type="module">
-    // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
     import {
     getAuth,
-    createUserWithEmailAndPassword
+    createUserWithEmailAndPassword,signInWithEmailAndPassword, GoogleAuthProvider,signInWithPopup
 } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
   
-    // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyCGwfjK3eD5l56-RSof9rn5cJgEVrC6Udc",
       authDomain: "to-do-project-ff177.firebaseapp.com",
@@ -127,33 +125,61 @@
       messagingSenderId: "38152615990",
       appId: "1:38152615990:web:02d255d08822c59a300097"
     };
-  
-    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
-    
-
-const auth = getAuth();
-const formDetails = document.getElementById("form");
-formDetails.addEventListener("submit", async (a) => {
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+    const signUp = document.getElementById("signUpForm");
+    const login = document.getElementById("loginForm");
+    const googleImg = document.getElementById("gImg");
+    signUp.addEventListener("submit", async (a) => {
     a.preventDefault();
     var email = document.querySelector('[type="email"]').value;
     var password = document.querySelector('[type="password"]').value;
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-        // Signed in 
         const user = userCredential.user;
-        
-       
-        // window.open("toDoIndex.html","_blank")
-        // .href="toDoIndex.html";
-        // window.replace.href="to_do_index.html";
-        window.location.href="to_do_index.html" 
+        window.location.href="to_do_index.html"; 
        })
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         alert(errorMessage);
     });
+})
+login.addEventListener("submit", async (a) => {
+    a.preventDefault();
+    var email = document.querySelector('[type="email"]').value;
+    var password = document.querySelector('[type="password"]').value;
+    signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    window.location.href="to_do_index.html";
+  })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage);
+    });
+})
+
+googleImg.addEventListener("click", () => {
+    signInWithPopup(auth, provider)
+  .then((result) => {
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    const user = result.user;
+    window.location.href="to_do_index.html";
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+
 })
 
   </script>
