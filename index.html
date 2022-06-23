@@ -24,7 +24,7 @@
                 <div>
                     <button type="submit">Sign Up</button>
                 </div>
-                <p>Already a member?<a href="#" style="color:dodgerblue">Login</a>
+                <p>Already a member?<a onclick="alreadyMember()" style="color:dodgerblue">Login</a>
                 </p>
                 <h5 class="center">or</h5>
                 <div class="signInPics">
@@ -54,10 +54,13 @@
             </form>
         </div>
     </div>
-    <ul>
-        <li class="rightAlign" onclick="signUpOn()"><a>Sign Up</a> </li>
-        <li class="rightAlign" onclick="loginOn()"><a>Login</a></li>
-    </ul>
+    <nav>
+        <ul>
+            <li class="rightAlign" onclick="signUpOn()"><a>Sign Up</a> </li>
+            <li class="rightAlign" onclick="loginOn()"><a>Login</a></li>
+        </ul>
+
+    </nav>
     <div>
         <div class="firstBox">
             <img id="image" src="Images\6.png" alt="Main Image here">

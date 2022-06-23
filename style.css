@@ -3,6 +3,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+nav {
+    position: sticky;
+    top: 0;
+    border: solid #19cd67;
+}
+
 body {
     margin: 0%;
 }
@@ -40,7 +46,7 @@ li a:hover {
 
 .box {
     margin-top: 5px;
-    border: solid black;
+    /* border: solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +56,7 @@ li a:hover {
 
 .firstBox {
     margin-top: 5px;
-    border: solid black;
+    /* border: solid black; */
     display: flex;
     /* flex-direction: column; */
     align-items: center;
