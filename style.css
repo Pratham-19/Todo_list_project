@@ -1,12 +1,20 @@
-* { 
+* {
     /* font-family: 'Aleo', serif; */
     font-family: 'Montserrat', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 nav {
     position: sticky;
     top: 0;
-    border: solid #19cd67;
+    /* border: solid #19cd67; */
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background-color: #ceffd6;
 }
 
 body {
@@ -20,10 +28,12 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-size: 1.5vw;
 }
 
 li {
     float: left;
+
 }
 
 .rightAlign {
@@ -37,21 +47,23 @@ li a {
     text-align: center;
     text-decoration: none;
     border-radius: 19px;
+
 }
 
 li a:hover {
     background-color: yellowgreen;
-    cursor: default;
+    cursor: pointer;
 }
 
 .box {
-    margin-top: 5px;
+    margin-top: 9.2vw;
+    margin-left: 2.5vw;
     /* border: solid black; */
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0;
+    gap: 0; */
 }
 
 .firstBox {
@@ -70,6 +82,7 @@ li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    width: 60vw;
 }
 
 #image {
@@ -80,10 +93,10 @@ li a:hover {
 }
 
 .midBox {
-    border: solid black;
-    width: 85%;
-    height: 250px;
+    width: 37%;
+    height: 254px;
     margin-bottom: 10px;
+    margin-top: -6vw;
 }
 
 #button {
@@ -175,3 +188,90 @@ button {
     justify-content: center;
 
 }
+
+.ele1{
+    display: flex;
+    justify-content: space-between;
+    /* border: \\; */
+}
+
+.ele1 p{
+
+    font-family: Manrope, sans-serif;
+    color: #f8db5e;
+    font-size: 4.5vw;
+    font-weight: 800;
+    border: 4px solid green;
+    border-radius: 34px;
+    background-color: #286251;
+    padding: 4vw;
+    height: 29vw;
+    text-align: left;
+    margin-left: 6vw;
+
+}
+
+.midBox img{
+   width: 33vw;
+}
+
+#heading{
+    font-size: 3.7vw;
+    font-family: Manrope,sans-serif;
+    font-weight: 900;
+    padding-left: 8vw;
+
+}
+
+.ele2{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border-radius: 4px;
+    background-color: #c9f9da;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 2vw;
+    padding: 16px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  }
+  
+  button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  button:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+  .signup{
+    display: flex;
+    justify-content: center;
+
+  }
+ 
